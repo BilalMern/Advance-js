@@ -8,11 +8,26 @@
 //     console.log(obj[i])
 // }
 
-function foo(){
+
+// function foo(){
+//  let sum=0;
+//  for (let i in arguments){
+//   sum = sum + arguments[i]
+//  }
+//  console.log(sum);
+// }
+// foo(2,3,4,1,2)
+// foo("billa",2,3)
+
+// here above we are not able to add the values with an string so to tackle this 
+
+function foo(name,course,...args){
     let sum=0;
-    for(let i in arguments){
-    sum+=arguments[i]
+    for(let i in args){
+        sum+=args[i]
+    }
+console.log(`${name} you are enrolled in ${course} and your marks are ${sum}`)
 }
-console.log(sum)
-}
-foo(3,4,5)
+foo("billa","BA",3,2,4)
+foo("john","BSCS",3,4,5,6)
+
