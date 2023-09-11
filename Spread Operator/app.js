@@ -45,7 +45,23 @@
 
 
 // ========Combining two arrays by spread method.
-let arr1=[2,3,4,5,6,7]
-let arr2=[8,9]
-let arr3=[...arr1,...arr2]
-console.log(arr3)
+// let arr1=[2,3,4,5,6,7]
+// let arr2=[8,9]
+// let arr3=[...arr1,...arr2]
+// console.log(arr3)
+
+// var arr=[2,3,4,5]
+// console.log(...arr,6)
+
+
+// =======Merging objects with spread operator
+let obj1={
+    name: "billa"
+}
+let obj2 ={
+    roll: 123
+}
+let obj3={
+    ...obj1,...obj2
+}
+console.log(obj3)
