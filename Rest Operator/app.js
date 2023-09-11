@@ -1,7 +1,18 @@
-var obj={
-    name: "billa",
-    roll: 123
+
+// For In loop
+// var obj={
+//     name: "billa",
+//     roll: 123
+// }
+// for(let i in obj){
+//     console.log(obj[i])
+// }
+
+function foo(){
+    let sum=0;
+    for(let i in arguments){
+    sum+=arguments[i]
 }
-for(let i in obj){
-    console.log(obj[i])
+console.log(sum)
 }
+foo(3,4,5)
