@@ -21,13 +21,13 @@
 
 // here above we are not able to add the values with an string so to tackle this 
 
-function foo(name,course,...args){
-    let sum=0;
-    for(let i in args){
-        sum+=args[i]
-    }
-console.log(`${name} you are enrolled in ${course} and your marks are ${sum}`)
-}
-foo("billa","BA",3,2,4)
-foo("john","BSCS",3,4,5,6)
+// function foo(name,course,...args){
+//     let sum=0;
+//     for(let i in args){
+//         sum+=args[i]
+//     }
+// console.log(`${name} you are enrolled in ${course} and your marks are ${sum}`)
+// }
+// foo("billa","BA",3,2,4)
+// foo("john","BSCS",3,4,5,6)
 

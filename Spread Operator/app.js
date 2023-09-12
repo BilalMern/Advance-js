@@ -55,13 +55,22 @@
 
 
 // =======Merging objects with spread operator
+// let obj1={
+//     name: "billa"
+// }
+// let obj2 ={
+//     roll: 123
+// }
+// let obj3={
+//     ...obj1,...obj2
+// }
+// console.log(obj3)
+
+
 let obj1={
     name: "billa"
 }
-let obj2 ={
-    roll: 123
+let obj2={
+    ...obj1
 }
-let obj3={
-    ...obj1,...obj2
-}
-console.log(obj3)
+obj1.course: "BSCS"
