@@ -12,8 +12,18 @@
 // console.log(obj)
 
 
-// let n= "name"
+// let n= "student"
 // let obj={
-//     [n + " " + "is"]: "bilal"
+//     [n + " " + "name"]: "bilal"
 // }
 // console.log(obj)
+
+let n = "student";
+let obj = {
+    [n + "name"]: "bilal",
+    course: "BA",
+    detail: function () {
+return `${this.studentname} your course is ${this.course}`
+    }
+};
+console.log(obj.detail())
