@@ -18,12 +18,24 @@
 // }
 // console.log(obj)
 
-let n = "student";
-let obj = {
-    [n + "name"]: "bilal",
-    course: "BA",
-    detail: function () {
-return `${this.studentname} your course is ${this.course}`
+// let n = "student";
+// let obj = {
+//     [n + "name"]: "bilal",
+//     course: "BA",
+//     detail: function () {
+// return `${this.studentname} your course is ${this.course}`
+//     }
+// };
+// console.log(obj.detail())
+
+
+
+// new method of declaring function in objects
+let n= "studentname";
+let obj={
+    [n]: "bilal",
+    foo(){
+      return (this.studentname)
     }
-};
-console.log(obj.detail())
+}
+console.log(obj[foo]())
