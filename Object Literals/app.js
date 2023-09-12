@@ -31,11 +31,21 @@
 
 
 // new method of declaring function in objects
-let n= "studentname";
-let obj={
-    [n]: "bilal",
-    foo(){
-      return (this.studentname)
-    }
+// let n= "studentname";
+// let obj={
+//     [n]: "bilal",
+//     foo(){
+//       return (this.studentname)
+//     }
+// }
+// console.log(obj[foo]())
+
+
+
+// Returning object through function
+let name="bilal";
+let course="BA";
+function foo(name,course){
+  return {name,course}
 }
-console.log(obj[foo]())
+console.log(foo(name,course))
