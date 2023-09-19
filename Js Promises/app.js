@@ -9,7 +9,29 @@
    
 //   }
 // });
- 
+
+
+
+// let prom=new Promise(function (resolve,reject){
+// let age=prompt ("enter you age")
+// if(age>=18){
+//   resolve("you are fit")
+// }
+// else{
+//   reject("not fit")
+// }
+// })
+// let onres=(res)=>{
+//   console.log(res)
+// }
+// let onrej=(rej)=>{
+//   console.log(rej)
+// }
+// prom.then(onres).catch(onrej)
+
+
+
+
 
 // let onresolve=(res)=>{
 //     console.log(res)
@@ -107,4 +129,26 @@
 // }
 // prom(true).then(onfulfil).catch(onreject)
 
+
+// let prom=(complete)=>{
+//   return new Promise(function(resolve,reject){
+//  console.log("fetching data please wait")
+// setTimeout(()=>{
+//   if(complete){
+// resolve("Successful")
+//   }
+//   else{
+//     console.log("not successful")
+//   }
+// },3000)  
+// }
+//   )}
+
+//   let onres=(result)=>{
+// console.log(result)
+//   }
+//   let onrej=(reject)=>{
+//     console.log(reject)
+//   }
+  // prom(false).then(onres).catch(onrej)
 
