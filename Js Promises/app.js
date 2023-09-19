@@ -63,21 +63,48 @@
 
 
 
-let prome= new Promise(function(resolve,reject){
-  let age=prompt("Enter Your age")
-  if(age>=18){
-    resolve("you are eligible")
-  }
-  else{
-    reject("you are not eligible")
-  }
-})
+// let prome= new Promise(function(resolve,reject){
+//   let age=prompt("Enter Your age")
+//   if(age>=18){
+//     resolve("you are eligible")
+//   }
+//   else{
+//     reject("you are not eligible")
+//   }
+// })
 
-let onresolve=(result)=> {
-console.log(result)
-}
-let onreject=(error)=> {
-  console.log(error)
-}
-prome.then(onresolve)
-prome.catch(onreject)
+// let onresolve=(result)=> {
+// console.log(result)
+// }
+// let onreject=(error)=> {
+//   console.log(error)
+// }
+// prome.then(onresolve)
+// prome.catch(onreject)
+
+
+
+
+// let prom=(complete)=>{
+  
+//   return new Promise(function(resolve,reject){
+//     console.log("Fetching data please wait")
+// setTimeout(()=>{
+//   if(complete){
+//     resolve("Successful")
+//   }
+//   else{
+//     reject("Failed")
+//   }
+// },3000)
+//   })
+// }
+// let onfulfil=(res)=>{
+//   console.log(res)
+// }
+// let onreject=(rej)=>{
+//   console.log(rej)
+// }
+// prom(true).then(onfulfil).catch(onreject)
+
+
