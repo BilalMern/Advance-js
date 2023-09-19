@@ -1,19 +1,83 @@
-let prom= new Promise(function(resolve,reject){
-  var age=+prompt("Enter your age")
-  if(age>=18){
-resolve("You are elegible")
+// let prom= new Promise(function(resolve,reject){
+//   var age=+prompt("Enter your age")
+//   if(age>=18){
+// resolve("You are elegible")
 
-}  
-  else{
-    reject("not eligible");
+// }  
+//   else{
+//     reject("not eligible");
    
+//   }
+// });
+ 
+
+// let onresolve=(res)=>{
+//     console.log(res)
+// }
+// let onrejection=(rej)=>{
+//     console.log(rej)
+// }
+// prom.then(onresolve)
+// prom.catch(onrejection)
+
+
+
+
+
+
+ 
+// let complete=true;
+// let prom= new Promise (function(resolve,reject){
+//     if(complete){
+//         resolve("I am successful")
+//     }
+//     else{
+//         reject("I am failed")
+//     }
+// });
+// console.log(prom)
+
+
+
+
+// let complete=true;
+// let prome= new Promise(function(resolve,reject){
+//   if(complete){
+//     resolve("Success");
+//   }
+//   else{
+//     reject("Failure");
+//   }
+// });
+// let onresolve=(result)=>{
+//   console.log(result);
+// }
+// let onreject=(error)=>{
+//   console.log(error);
+// }
+
+// prome(true).then(onresolve);
+// prome(false).catch(onreject);
+
+
+
+
+
+let prome= new Promise(function(resolve,reject){
+  let age=prompt("Enter Your age")
+  if(age>=18){
+    resolve("you are eligible")
   }
-});
-let onresolve=(res)=>{
-    console.log(res)
+  else{
+    reject("you are not eligible")
+  }
+})
+
+let onresolve=(result)=> {
+console.log(result)
 }
-let onrejection=(rej)=>{
-    console.log(rej)
+let onreject=(error)=> {
+  console.log(error)
 }
-prom.then(onresolve)
-prom.catch(onrejection)
+prome.then(onresolve)
+prome.catch(onreject)
