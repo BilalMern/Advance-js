@@ -339,3 +339,16 @@
 // prome.catch(function(rej){
 //   console.log(rej)
 // })
+
+
+
+
+// new Promise(function(resolve,reject){
+//   setTimeout(function(){
+// resolve("hello there")
+// reject("hey you")
+//   },2000)
+// }).then(function(res){
+//   console.log(res)
+// })
+
