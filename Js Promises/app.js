@@ -218,22 +218,39 @@
 // }
 // prome.then(onres).catch(onrej)
 
-let condition=true;
-let prome=new Promise(function(resolve,reject){
-  console.log("We are fetching your data plz wait..")
+// let condition=true;
+// let prome=new Promise(function(resolve,reject){
+//   console.log("We are fetching your data plz wait..")
+//   setTimeout(function(){
+// if(condition){
+//   resolve("you are passed congratulations!")
+// }
+// else{
+//   reject("Better luck next time")
+// }
+//   },3000)
+// })
+// let onres=(res)=>{
+//   console.log(res)
+// }
+// let onrej=(rej)=>{
+//   console.log(rej)
+// }
+// prome.then(onres).catch(onrej)
+
+
+
+
+
+// promiseone
+
+const promiseOne=new Promise(function(resolve,reject){
   setTimeout(function(){
-if(condition){
-  resolve("you are passed congratulations!")
-}
-else{
-  reject("Better luck next time")
-}
-  },3000)
+    console.log("Assync task is completed")
+resolve()
+  },2000)
 })
-let onres=(res)=>{
-  console.log(res)
-}
-let onrej=(rej)=>{
-  console.log(rej)
-}
-prome.then(onres).catch(onrej)
+promiseOne.then(function(){
+  console.log("Promise consumed")
+})
+
