@@ -245,70 +245,97 @@
 // promiseone
 
 // Method One
-let condition=true;
-const promiseOne=new Promise(function(resolve,reject){
-  setTimeout(function(){
-    console.log("Assync task is completed")
-    if(condition){
-    resolve("hey there")}
-    else{
-      reject("not here!")
-    }
-},2000)
+// let condition=true;
+// const promiseOne=new Promise(function(resolve,reject){
+
+//   setTimeout(function(){
+//     console.log("Assync task is completed")
+//     if(condition){
+//     resolve("hey there")}
+//     else{
+//       reject("not here!")
+//     }
+// },2000)
  
-})
-let onres=(res)=>{
-  console.log(res)
-}
-let onrej=(rej)=>{
-  console.log(rej)
-}
-promiseOne.then(onres)
-promiseOne.catch(onrej)
+// })
+// let onres=(res)=>{
+//   console.log(res)
+// }
+// let onrej=(rej)=>{
+//   console.log(rej)
+// }
+// promiseOne.then(onres)
+// promiseOne.catch(onrej)
+
+
+
+
 
 
 
 // Method Two
-let condition=true;
-const promiseOne=new Promise(function(resolve,reject){
-  setTimeout(function(){
-    console.log("Assync task is completed")
-    if(condition){
-    resolve()}
-    else{
-      reject()
-    }
-},2000)
+// let condition=true;
+// const promiseOne=new Promise(function(resolve,reject){
+//   setTimeout(function(){
+//     console.log("Assync task is completed")
+//     if(condition){
+//     resolve()}
+//     else{
+//       reject()
+//     }
+// },2000)
  
-})
-promiseOne.then(function(){
-  console.log("Promise consumed")
-})
+// })
+// promiseOne.then(function(){
+//   console.log("Promise consumed")
+// })
 
-promiseOne.catch(function(){
-  console.log("We are sorry")
-})
+// promiseOne.catch(function(){
+//   console.log("We are sorry")
+// })
 
 
 
-// Method Three
-let condition=true;
-const promiseOne=new Promise(function(resolve,reject){
-  setTimeout(function(){
-    console.log("Assync task is completed")
-    if(condition){
-    resolve()}
-    else{
-      reject()
-    }
-},2000)
+// // Method Three
+// let condition=true;
+// const promiseOne=new Promise(function(resolve,reject){
+//   setTimeout(function(){
+//     console.log("Assync task is completed")
+//     if(condition){
+//     resolve()}
+//     else{
+//       reject()
+//     }
+// },2000)
  
-})
-let onres=()=>{
-  console.log("hello there!")
-}
-let onrej=()=>{
-  console.log("not there!")
-}
-promiseOne.then(onres)
-promiseOne.catch(onrej)
+// })
+// let onres=()=>{
+//   console.log("hello there!")
+// }
+// let onrej=()=>{
+//   console.log("not there!")
+// }
+// promiseOne.then(onres)
+// promiseOne.catch(onrej)
+
+
+
+// Method Four
+// let condition=true;
+// let prome=new Promise(function(resolve,reject){
+//   console.log("plz wait we are fetching data")
+//   setTimeout(function(){
+//     if(condition){
+//     resolve("hey your data is here")
+//     }
+//     else{
+//       reject("not found!")
+//     }
+//   },3000)
+// })
+// prome.then(function(res){
+//   console.log(res)
+// })
+// prome.catch(function(rej){
+//   console.log(rej)
+// })
