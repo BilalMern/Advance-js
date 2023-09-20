@@ -244,13 +244,71 @@
 
 // promiseone
 
+// Method One
+let condition=true;
 const promiseOne=new Promise(function(resolve,reject){
   setTimeout(function(){
     console.log("Assync task is completed")
-resolve()
-  },2000)
+    if(condition){
+    resolve("hey there")}
+    else{
+      reject("not here!")
+    }
+},2000)
+ 
+})
+let onres=(res)=>{
+  console.log(res)
+}
+let onrej=(rej)=>{
+  console.log(rej)
+}
+promiseOne.then(onres)
+promiseOne.catch(onrej)
+
+
+
+// Method Two
+let condition=true;
+const promiseOne=new Promise(function(resolve,reject){
+  setTimeout(function(){
+    console.log("Assync task is completed")
+    if(condition){
+    resolve()}
+    else{
+      reject()
+    }
+},2000)
+ 
 })
 promiseOne.then(function(){
   console.log("Promise consumed")
 })
 
+promiseOne.catch(function(){
+  console.log("We are sorry")
+})
+
+
+
+// Method Three
+let condition=true;
+const promiseOne=new Promise(function(resolve,reject){
+  setTimeout(function(){
+    console.log("Assync task is completed")
+    if(condition){
+    resolve()}
+    else{
+      reject()
+    }
+},2000)
+ 
+})
+let onres=()=>{
+  console.log("hello there!")
+}
+let onrej=()=>{
+  console.log("not there!")
+}
+promiseOne.then(onres)
+promiseOne.catch(onrej)
