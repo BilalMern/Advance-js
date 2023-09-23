@@ -22,3 +22,14 @@
 // },0)
 // console.log("3")
 
+function One(foo){
+    setTimeout(function(){
+        console.log("hello there!")
+        foo()
+    },2000)
+}
+
+function two(){
+    console.log("how r u")
+}
+One(two)
