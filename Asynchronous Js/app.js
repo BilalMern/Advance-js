@@ -94,11 +94,13 @@ let stokes={
 
 function order(fruit_name,calling_production){
     setTimeout(function(){
-        console.log(`${stokes.Fruits[fruit_name]}`)
+        console.log(`${stokes.Fruits[fruit_name]} was selected`)
     },2000)
 calling_production()
 }
 function production(){
-
+setTimeout(function(){
+    console.log("production has started");
+},0);
 }
 order(0,production)
