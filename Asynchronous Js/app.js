@@ -84,34 +84,45 @@
 // order(productionn)
 
 
+
+
+//function order(fruit_name){
+//     setTimeout(function(){
+//         console.log(`${stokes.Fruits[fruit_name]} was selected`)
+//     },3000)
+// setTimeout(function(){
+//     console.log("ready to production!")
+// },4000)
+// }
+// order(0)
+
+
 let stokes={
     Fruits: ["strawberry","grapes","banana","apple"],
     Liquid: ["water","ice"],
     Holder: ["cone","cup","stick"],
     Toppings:["chocolates","peanuts"]
 };
-
-
-// function order(fruit_name,calling_production){
-//     setTimeout(function(){
-//         console.log(`${stokes.Fruits[fruit_name]} was selected`)
-//     },2000)
-// calling_production()
-// }
-// function production(){
-// setTimeout(function(){
-//     console.log("production has started");
-// },0);
-// }
-// order(0,production)
-
-
-function order(fruit_name){
+function order(fruit_name,calling_production){
     setTimeout(function(){
         console.log(`${stokes.Fruits[fruit_name]} was selected`)
-    },3000)
-setTimeout(function(){
-    console.log("ready to production!")
-},4000)
+        calling_production()
+    },2000)
+
 }
-order(0)
+function production(){
+setTimeout(function(){
+    console.log("production has started");
+    setTimeout(function(){
+        console.log("Fruit has been chopped")
+        setTimeout(function(){
+            console.log(`${}`)
+        },1000)
+    },2000)    
+},800);
+}
+order(0,production)
+
+
+
+
