@@ -92,15 +92,26 @@ let stokes={
 };
 
 
-function order(fruit_name,calling_production){
+// function order(fruit_name,calling_production){
+//     setTimeout(function(){
+//         console.log(`${stokes.Fruits[fruit_name]} was selected`)
+//     },2000)
+// calling_production()
+// }
+// function production(){
+// setTimeout(function(){
+//     console.log("production has started");
+// },0);
+// }
+// order(0,production)
+
+
+function order(fruit_name){
     setTimeout(function(){
         console.log(`${stokes.Fruits[fruit_name]} was selected`)
-    },2000)
-calling_production()
-}
-function production(){
+    },3000)
 setTimeout(function(){
-    console.log("production has started");
-},0);
+    console.log("ready to production!")
+},4000)
 }
-order(0,production)
+order(0)
