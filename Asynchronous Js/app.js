@@ -34,7 +34,29 @@
 // }
 // One(two)
 
-setTimeout(function(){
-    console.log("hello there!")
-},3000)
-setTimeout(function(){})
+
+// function foo1(calling_2){
+//     setTimeout(function(){
+//         calling_2()
+//         console.log("hello foo1")
+//     },3000)
+// }
+// function foo2(){
+//     setTimeout(function(){
+//         console.log("hello foo2")
+//     },1000)
+// }
+// foo1(foo2);
+
+
+function foo1(){
+    setTimeout(function(){
+        console.log("hello foo1")
+    },3000)
+}
+function foo2(){
+    setTimeout(function(){
+        console.log("hello foo2")
+    },1000)
+}
+foo1(foo2());
