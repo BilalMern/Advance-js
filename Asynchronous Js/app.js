@@ -158,3 +158,23 @@
 
 
 // Making icecream shop using Promises!
+// let stokes = {
+//         Fruits: ["strawberry", "grapes", "banana", "apple"],
+//         Liquid: ["water", "ice"],
+//         Holder: ["cone", "cup", "stick"],
+//         Toppings: ["chocolates", "peanuts"]
+//     };
+// let is_shop_open =true;
+// let order=(time,work)=>{
+//     return new Promise((resolve,reject)=>{
+// if(is_shop_open){
+//     setTimeout(()=>{
+//         resolve(work());
+//     },time);
+    
+// }else{
+//     reject(console.log("We are closed"))
+// };
+//     });
+// };
+// order(2000,()=>console.log(`${stokes.Fruits[0]}`))
