@@ -1,15 +1,13 @@
-// let prom= new Promise(function(resolve,reject){
-//   var age=+prompt("Enter your age")
+// let prom=new Promise(function(resolve,reject){
+//   var age=prompt("Enter your age")
 //   if(age>=18){
-// resolve("You are elegible")
-
-// }  
-//   else{
-//     reject("not eligible");
-   
+//     resolve("You are eligible")
 //   }
-// });
-
+//   else{
+//     reject("not eligible")
+//   }
+// })
+// console.log(prom)
 
 
 // let prom=new Promise(function (resolve,reject){
@@ -29,8 +27,42 @@
 // }
 // prom.then(onres).catch(onrej)
 
+// let prom=new Promise(function(resolve,reject){
+//   let age=prompt("Enter your age")
+//   if(age>=18){
+//     resolve()
+//   }
+//   else{
+//     reject()
+//   }
+// })
+// let onres=()=>{
+// console.log("you are passed")
+// }
+// let onrej=()=>{
+//   console.log("you are failed")
+// }
+// prom.then(onres)
+// prom.catch(onrej)
 
 
+// let prom=new Promise(function(resolve,reject){
+//     let age=prompt("Enter your age")
+//     if(age>=18){
+//       resolve("you are passed")
+//     }
+//     else{
+//       reject("you are rejected")
+//     }
+//   })
+//   let onres=(res)=>{
+// console.log(res)
+//   }
+//   let onrej=(rej)=>{
+//     console.log(rej)
+//   }
+//   prom.then(onres)
+//   prom.catch(onrej)
 
 
 

@@ -97,55 +97,64 @@
 // order(0)
 
 
-let stokes = {
-    Fruits: ["strawberry", "grapes", "banana", "apple"],
-    Liquid: ["water", "ice"],
-    Holder: ["cone", "cup", "stick"],
-    Toppings: ["chocolates", "peanuts"]
-};
-function order(fruit_name, calling_production) {
-    setTimeout(function () {
-        console.log(`${stokes.Fruits[fruit_name]} was selected`)
-        calling_production()
-    }, 2000)
-
-}
-function production() {
-
-    setTimeout(function () {
-        console.log("production has started");
-
-        setTimeout(function () {
-            console.log("Fruit has been chopped")
-
-            setTimeout(function () {
-                console.log(`${stokes.Liquid[0]} and ${stokes.Liquid[1]} was added`);
-
-                setTimeout(function () {
-                    console.log("Machine is starting");
-
-                    setTimeout(function () {
-                        console.log(`Ice cream is presented in ${stokes.Holder[0]}`);
-
-
-
-                        setTimeout(function () {
-                            console.log(`${stokes.Toppings[0]} was added to icecream!`);
-
-                            setTimeout(function () {
-                                console.log("Your Ice cream is ready plz take it!")
-                            }, 2000)
-
-                        }, 3000)
-
-                    }, 2000)
-                }, 1000)
-            }, 1000)
-        }, 2000)
-    }, 800);
-}
-order(0, production)
 
 
 
 
+// Making icecream with callback hell!
+
+// let stokes = {
+//     Fruits: ["strawberry", "grapes", "banana", "apple"],
+//     Liquid: ["water", "ice"],
+//     Holder: ["cone", "cup", "stick"],
+//     Toppings: ["chocolates", "peanuts"]
+// };
+// function order(fruit_name, calling_production) {
+//     setTimeout(function () {
+//         console.log(`${stokes.Fruits[fruit_name]} was selected`)
+//         calling_production()
+//     }, 2000)
+
+// }
+// function production() {
+
+//     setTimeout(function () {
+//         console.log("production has started");
+
+//         setTimeout(function () {
+//             console.log("Fruit has been chopped")
+
+//             setTimeout(function () {
+//                 console.log(`${stokes.Liquid[0]} and ${stokes.Liquid[1]} was added`);
+
+//                 setTimeout(function () {
+//                     console.log("Machine is starting");
+
+//                     setTimeout(function () {
+//                         console.log(`Ice cream is presented in ${stokes.Holder[0]}`);
+
+
+
+//                         setTimeout(function () {
+//                             console.log(`${stokes.Toppings[0]} was added to icecream!`);
+
+//                             setTimeout(function () {
+//                                 console.log("Your Ice cream is ready plz take it!")
+//                             }, 2000)
+
+//                         }, 3000)
+
+//                     }, 2000)
+//                 }, 1000)
+//             }, 1000)
+//         }, 2000)
+//     }, 800);
+// }
+// order(0, production)
+
+
+
+
+
+
+// Making icecream shop using Promises!
