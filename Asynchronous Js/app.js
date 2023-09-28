@@ -178,3 +178,21 @@
 //     });
 // };
 // order(2000,()=>console.log(`${stokes.Fruits[0]}`))
+
+
+
+let prom= new Promise((resolve,reject)=>{
+    let age=prompt("Enter your age")
+    if(age>18){
+        resolve();
+    }
+    else{
+        reject();
+    }
+})
+
+prom.then(console.log("you are here"))
+prom.catch(console.log("not here"))
+
+    
+    

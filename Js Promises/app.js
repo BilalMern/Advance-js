@@ -353,24 +353,24 @@
 
 
 // Method Four
-// let condition=true;
-// let prome=new Promise(function(resolve,reject){
-//   console.log("plz wait we are fetching data")
-//   setTimeout(function(){
-//     if(condition){
-//     resolve("hey your data is here")
-//     }
-//     else{
-//       reject("not found!")
-//     }
-//   },3000)
-// })
-// prome.then(function(res){
-//   console.log(res)
-// })
-// prome.catch(function(rej){
-//   console.log(rej)
-// })
+let condition=true;
+let prome=new Promise(function(resolve,reject){
+  console.log("plz wait we are fetching data")
+  setTimeout(function(){
+    if(condition){
+    resolve("hey your data is here")
+    }
+    else{
+      reject("not found!")
+    }
+  },3000)
+})
+prome.then(function(res){
+  console.log(res)
+})
+prome.catch(function(rej){
+  console.log(rej)
+})
 
 
 
