@@ -2,6 +2,12 @@
 // .then(function(data){
 //     console.log(data)
 // })
+
+// fetch("context/readme.txt").then(response => response.text())
+// .then(res => console.log(res))
+
+
+
 // fetch("context/readme.txt") .then(function(result){return result.text()}) 
 // // OR
 // fetch ("https://jsonplaceholder.typicode.com/users") .then( result => result.json())
@@ -11,6 +17,11 @@
 //         document.write(`${data[x].name}-${data[x].email} <br> `)
 //     }
 // })
+
+
+
+
+
 // var obj = {
 
 //     obj1: {
@@ -60,19 +71,39 @@
 //     } (body k through jou data bhaijne wale hain uss ki type kya hogi)
 // })
 
-let obj ={
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }
+// let obj ={
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: 'POST',
+//   body: JSON.stringify(obj),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+
 fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify(obj),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
+    method: 'POST',
+    body: JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    },
 })
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+    .then((response) => response.json())
+    .then((json) => {
+        console.log(json)
+        
+            document.write(`${json.title}`)
+            
+        
 
-
+    });
