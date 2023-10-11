@@ -35,20 +35,44 @@
 //     console.log(obj[i])
 // }
 
-let obj = {
+// let obj = {
 
-obj1:{
-    name:"bilal",
-    age: 18
-},
-obj2:{
-    name: "qaiser",
-    age:20
-}
+// obj1:{
+//     name:"bilal",
+//     age: 18
+// },
+// obj2:{
+//     name: "qaiser",
+//     age:20
+// }
 
-}
-for(let i in obj){
-    console.log(obj[i].name)
-}
+// }
+// for(let i in obj){
+//     console.log(obj[i].name)
+// }
+
+// fetch(file/url,{
+//     method: "POST",
+//     body: "data", (data to save update or delete)
+//     header: {
+//         'Content-Type': 'application/json',
+//         'Content-Type': 'application/x-www-form-urlencoded'
+//     } (body k through jou data bhaijne wale hain uss ki type kya hogi)
+// })
+
+let obj ={
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify(obj),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 
 
