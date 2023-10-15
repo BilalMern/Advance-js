@@ -98,11 +98,23 @@
 
 // before async await
 
-let p = new Promise((resolve,reject)=>{
-    resolve("promise resloved!")
-})
+// let p = new Promise((resolve,reject)=>{
+//     resolve("promise resloved!")
+// })
 
-function getData(){
-    return p.then((res)=>{console.log(res)})
+// function getData(){
+//     return p.then((res)=>{console.log(res)})
+// }
+// getData()
+
+
+
+//After async await
+let p = new Promise((resolve,reject)=> {
+    resolve("promise resolved!")
+})
+async function getData(){
+    const data = await p;
+    console.log(data)
 }
 getData()
