@@ -82,12 +82,27 @@
 // data.then( res => console.log(res))
 
 
-let p= new Promise((resolve,reject)=>{
-    resolve("Promise resolved!!")
+
+
+// let p= new Promise((resolve,reject)=>{
+//     resolve("Promise resolved!!")
+// })
+
+// async function getData() {
+//     return p;
+//   }
+//   let data = getData();
+//   data.then( res => console.log(res))
+
+
+
+// before async await
+
+let p = new Promise((resolve,reject)=>{
+    resolve("promise resloved!")
 })
 
-async function getData() {
-    return p;
-  }
-  let data = getData();
-  data.then( res => console.log(res))
+function getData(){
+    return p.then((res)=>{console.log(res)})
+}
+getData()
