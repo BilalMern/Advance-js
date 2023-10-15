@@ -9,6 +9,19 @@
 // })
 // console.log(prom)
 
+// let prom = new Promise(function(resolve,reject){
+//   let age = prompt ("Enter your age")
+// if(age>=18){
+//   resolve("You are eligible")
+// }
+// else{
+//   reject("you are not allowed")
+// }
+// }).then((res)=>{
+//   console.log(res)
+// }).catch((error)=>{
+//   console.log(error)
+// })
 
 // let prom=new Promise(function (resolve,reject){
 // let age=prompt ("enter you age")
@@ -27,7 +40,7 @@
 // }
 // prom.then(onres).catch(onrej)
 
-// let prom=new Promise(function(resolve,reject){
+// let prom=new Promise((resolve,reject)=>{
 //   let age=prompt("Enter your age")
 //   if(age>=18){
 //     resolve()
@@ -44,7 +57,6 @@
 // }
 // prom.then(onres)
 // prom.catch(onrej)
-
 
 // let prom=new Promise(function(resolve,reject){
 //     let age=prompt("Enter your age")
@@ -64,15 +76,6 @@
 //   prom.then(onres)
 //   prom.catch(onrej)
 
-
-
-
-
-
-
-
-
-
 // let onresolve=(res)=>{
 //     console.log(res)
 // }
@@ -82,12 +85,6 @@
 // prom.then(onresolve)
 // prom.catch(onrejection)
 
-
-
-
-
-
- 
 // let complete=true;
 // let prom= new Promise (function(resolve,reject){
 //     if(complete){
@@ -98,28 +95,6 @@
 //     }
 // });
 // console.log(prom)
-
-
-
-
-// let complete=true;
-// let prome= new Promise(function(resolve,reject){
-//   if(complete){
-//     resolve("Success");
-//   }
-//   else{
-//     reject("Failure");
-//   }
-// });
-// let onresolve=(result)=>{
-//   console.log(result);
-// }
-// let onreject=(error)=>{
-//   console.log(error);
-// }
-// prome.then(onresolve);
-// prome.catch(onreject);
-
 
 // let complete=true;
 // let prom= new Promise(function(resolve,reject){
@@ -138,10 +113,6 @@
 // }
 // prom.then(onres)
 // prom.catch(onrej)
-
-
-
-
 
 // let prome= new Promise(function(resolve,reject){
 //   let age=prompt("Enter Your age")
@@ -162,30 +133,27 @@
 // prome.then(onresolve)
 // prome.catch(onreject)
 
+// let prom = (complete) => {
+//   return new Promise(function (resolve, reject) {
+//     console.log("Fetching data please wait");
+//     setTimeout(() => {
+//       if (complete) {
+//         resolve("Successful");
+//       } else {
+//         reject("Failed");
+//       }
+//     }, 3000);
+//   });
+// };
+// let onfulfil = (res) => {
+//   console.log(res);
+// };
+// let onreject = (rej) => {
+//   console.log(rej);
+// };
+// prom(true).then(onfulfil).catch(onreject);
 
 
-
-// let prom=(complete)=>{
-  
-//   return new Promise(function(resolve,reject){
-//     console.log("Fetching data please wait")
-// setTimeout(()=>{
-//   if(complete){
-//     resolve("Successful")
-//   }
-//   else{
-//     reject("Failed")
-//   }
-// },3000)
-//   })
-// }
-// let onfulfil=(res)=>{
-//   console.log(res)
-// }
-// let onreject=(rej)=>{
-//   console.log(rej)
-// }
-// prom(true).then(onfulfil).catch(onreject)
 
 
 // let prom=(complete)=>{
@@ -198,7 +166,7 @@
 //   else{
 //     console.log("not successful")
 //   }
-// },3000)  
+// },3000)
 // }
 //   )}
 
@@ -208,9 +176,7 @@
 //   let onrej=(reject)=>{
 //     console.log(reject)
 //   }
-  // prom(false).then(onres).catch(onrej)
-
-
+// prom(false).then(onres).catch(onrej)
 
 //   let prom=(complete)=>{
 //    return new Promise(function(resolve,reject){
@@ -223,15 +189,15 @@
 //   reject("fetching failed!")
 // }
 //     },3000)
-//    }) 
+//    })
 //   }
 //   let onres=(res)=>{
 //     console.log(res)
 //   }
 //   let onrej=(rej)=>{
 //     console.log(rej)
-  // }
-  // prom(true).then(onres).catch(onrej)
+// }
+// prom(true).then(onres).catch(onrej)
 
 // let prome= new Promise(function(resolve,reject){
 //   let age=prompt("enter your age")
@@ -270,10 +236,6 @@
 // }
 // prome.then(onres).catch(onrej)
 
-
-
-
-
 // promiseone
 
 // Method One
@@ -288,7 +250,7 @@
 //       reject("not here!")
 //     }
 // },2000)
- 
+
 // })
 // let onres=(res)=>{
 //   console.log(res)
@@ -298,12 +260,6 @@
 // }
 // promiseOne.then(onres)
 // promiseOne.catch(onrej)
-
-
-
-
-
-
 
 // Method Two
 // let condition=true;
@@ -316,7 +272,7 @@
 //       reject()
 //     }
 // },2000)
- 
+
 // })
 // promiseOne.then(function(){
 //   console.log("Promise consumed")
@@ -325,8 +281,6 @@
 // promiseOne.catch(function(){
 //   console.log("We are sorry")
 // })
-
-
 
 // // Method Three
 // let condition=true;
@@ -339,7 +293,7 @@
 //       reject()
 //     }
 // },2000)
- 
+
 // })
 // let onres=()=>{
 //   console.log("hello there!")
@@ -350,30 +304,25 @@
 // promiseOne.then(onres)
 // promiseOne.catch(onrej)
 
-
-
 // Method Four
-let condition=true;
-let prome=new Promise(function(resolve,reject){
-  console.log("plz wait we are fetching data")
-  setTimeout(function(){
-    if(condition){
-    resolve("hey your data is here")
-    }
-    else{
-      reject("not found!")
-    }
-  },3000)
-})
-prome.then(function(res){
-  console.log(res)
-})
-prome.catch(function(rej){
-  console.log(rej)
-})
-
-
-
+// let condition=true;
+// let prome=new Promise(function(resolve,reject){
+//   console.log("plz wait we are fetching data")
+//   setTimeout(function(){
+//     if(condition){
+//     resolve("hey your data is here")
+//     }
+//     else{
+//       reject("not found!")
+//     }
+//   },3000)
+// })
+// prome.then(function(res){
+//   console.log(res)
+// })
+// prome.catch(function(rej){
+//   console.log(rej)
+// })
 
 // new Promise(function(resolve,reject){
 //   setTimeout(function(){
@@ -383,4 +332,3 @@ prome.catch(function(rej){
 // }).then(function(res){
 //   console.log(res)
 // })
-
