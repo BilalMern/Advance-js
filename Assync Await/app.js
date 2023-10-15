@@ -139,11 +139,24 @@
 
 // getData()
 
-let p= new Promise((resolve,reject)=>{
-    resolve("promise is resolved")
+// let p= new Promise((resolve,reject)=>{
+//     resolve("promise is resolved")
+// })
+// async function getData(){
+//     let val = await p;
+//     console.log(val)
+// }
+// getData()
+
+
+let p= new Promise((resolve,reject) => {
+    setTimeout(()=>{
+        resolve("Promise is resolved")
+
+    },5000)
 })
-async function getData(){
-    let val = await p;
-    console.log(val)
+function getData(){
+    p.then(res=>console.log(res))
+    console.log("hello there!")
 }
 getData()
