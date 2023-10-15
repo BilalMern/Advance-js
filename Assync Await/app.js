@@ -112,15 +112,38 @@
 // }
 // getData()
 
-let p = new Promise((resolve,reject)=>{
-    setTimeout(function(){
-        resolve("promise resolved")
-        console.log("hello there!")
-    },3000)
+// let p = new Promise((resolve,reject)=>{
+//     setTimeout(function(){
+//         resolve("promise resolved")
+//         console.log("hello there!")
+//     },3000)
     
-});
+// });
+// async function getData(){
+//  await p.then(res=> console.log(res))
+// console.log("hey there!")    
+// }
+// getData()
+
+
+// let p = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("promise resolved")
+//     },4000)
+// })
+// async function getData(){
+//     await p.then(res=> console.log(res))
+//     console.log("hey there!")
+// }
+
+
+// getData()
+
+let p= new Promise((resolve,reject)=>{
+    resolve("promise is resolved")
+})
 async function getData(){
- await p.then(res=> console.log(res))
-console.log("hey there!")    
+    let val = await p;
+    console.log(val)
 }
 getData()
