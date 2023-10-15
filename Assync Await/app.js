@@ -75,8 +75,19 @@
 // test()
 
 // Async function will always return promise. either we return a promise from this function then it will totally fine but if we return some string or other than promise then this function will wrap that thing in promise and return us a promise.
+// async function getData() {
+//   return "hello there!";
+// }
+// let data = getData();
+// data.then( res => console.log(res))
+
+
+let p= new Promise((resolve,reject)=>{
+    resolve("Promise resolved!!")
+})
+
 async function getData() {
-  return "hello there!";
-}
-let data = getData();
-data.then( res => console.log(res))
+    return p;
+  }
+  let data = getData();
+  data.then( res => console.log(res))
