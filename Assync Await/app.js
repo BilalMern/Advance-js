@@ -81,9 +81,6 @@
 // let data = getData();
 // data.then( res => console.log(res))
 
-
-
-
 // let p= new Promise((resolve,reject)=>{
 //     resolve("Promise resolved!!")
 // })
@@ -93,8 +90,6 @@
 //   }
 //   let data = getData();
 //   data.then( res => console.log(res))
-
-
 
 // before async await
 
@@ -107,14 +102,25 @@
 // }
 // getData()
 
-
-
 //After async await
-let p = new Promise((resolve,reject)=> {
-    resolve("promise resolved!")
-})
+// let p = new Promise((resolve,reject)=> {
+//     resolve("promise resolved!")
+// })
+// async function getData(){
+//     const data = await p;
+//     console.log(data)
+// }
+// getData()
+
+let p = new Promise((resolve,reject)=>{
+    setTimeout(function(){
+        resolve("promise resolved")
+        console.log("hello there!")
+    },3000)
+    
+});
 async function getData(){
-    const data = await p;
-    console.log(data)
+ await p.then(res=> console.log(res))
+console.log("hey there!")    
 }
 getData()
