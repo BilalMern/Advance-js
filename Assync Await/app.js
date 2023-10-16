@@ -117,14 +117,13 @@
 //         resolve("promise resolved")
 //         console.log("hello there!")
 //     },3000)
-    
+
 // });
 // async function getData(){
 //  await p.then(res=> console.log(res))
-// console.log("hey there!")    
+// console.log("hey there!")
 // }
 // getData()
-
 
 // let p = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
@@ -135,7 +134,6 @@
 //     await p.then(res=> console.log(res))
 //     console.log("hey there!")
 // }
-
 
 // getData()
 
@@ -148,15 +146,65 @@
 // }
 // getData()
 
+// let p= new Promise((resolve,reject) => {
+//     setTimeout(()=>{
+//         resolve("Promise is resolved")
 
-let p= new Promise((resolve,reject) => {
-    setTimeout(()=>{
-        resolve("Promise is resolved")
+//     },5000)
+// })
+// function getData(){
+//     p.then(res=>console.log(res))
+//     console.log("hello there!")
+// }
+// getData()
 
-    },5000)
-})
-function getData(){
-    p.then(res=>console.log(res))
-    console.log("hello there!")
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise is resolved");
+//   }, 3000);
+// });
+//  function getData() {
+//   let val = p;
+//   val.then((res)=>{
+//     console.log(res)
+//   })
+
+// }
+// getData();
+
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise is resolved");
+//   }, 3000);
+// });
+//  async function getData() {
+//    await p;
+//   p.then((res)=>{
+//     console.log(res)
+//   })
+
+// }
+// getData();
+
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise is resolved");
+//   }, 20000);
+// });
+// async function getData() {
+//    let val = await p;
+//   console.log(val)
+
+// }
+// getData();
+
+let p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("promise has been resolved");
+  }, 3000);
+});
+async function getData(){
+    
+    console.log (await p)
 }
 getData()
