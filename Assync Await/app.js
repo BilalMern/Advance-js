@@ -198,13 +198,49 @@
 // }
 // getData();
 
-let p = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("promise has been resolved");
-  }, 3000);
-});
+// let p = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise has been resolved");
+//   }, 3000);
+// });
+// async function getData(){
+
+//     console.log (await p)
+// }
+// getData()
+
+// let p = new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve("promise has been resolved");
+//       }, 3000);
+//     });
+//     async function getData(){
+
+//         console.log (await p)
+//     }
+//     getData()
+
+//     async function getData(){
+//         console.log(await p)
+//     }
+//     getData()
+
+
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("The promise1 has been resolved!");
+    }, 5000);
+  });
+  let p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("The promise2 has been resolved!");
+    }, 3000);
+  });
 async function getData(){
-    
-    console.log (await p)
+    let data1= await p1;
+    console.log(data1)
+
+    let data2 = await p2;
+    console.log(data2)
 }
 getData()
