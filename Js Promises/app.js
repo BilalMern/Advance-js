@@ -337,11 +337,29 @@
 
 // Inrview and different promise API's!
 
+// let promiseCall=function(data,message){
+//     return function(resolve,reject){
+//         setTimeout(function(){
+// console.log(`The ${message} has been resolved`)
+// resolve(data)
+//         },data*100)
+//     }
+// }
+// let promise1=new Promise(promiseCall(10,"first"))
+// let promise2=new Promise(promiseCall(20,"second"))
+
+// Promise.all([promise1,promise2]).then((res)=>{
+//     console.log(res)
+// })
+
 //Promise.all!
 
 let prom1= new Promise(function(resolve,reject){
-    // resolve("first promise resolved")
-    reject("first promise failed")
+   setTimeout(function(){
+    resolve("first promise resolved")
+    // reject("first promise failed")
+   },3000)
+   
 })
 let onres1=function(res){
     console.log(res)
@@ -349,4 +367,25 @@ let onres1=function(res){
 let onrej1= function(rej){
     console.error(rej)
 }
-prom1.then(onres1).catch(onrej1)
+// prom1.then(onres1).catch(onrej1)
+
+
+let prom2= new Promise(function(resolve,reject){
+    setTimeout(function(){
+    //  resolve("2nd promise resolved")
+     reject("2nd promise failed")
+    },1000)
+    
+ })
+ let onres2=function(res){
+     console.log(res)
+ }
+ let onrej2= function(rej){
+     console.log(rej)
+ }
+//  prom2.then(onres2).catch(onrej2)
+Promise.all([prom1,prom2]).then(function(res){
+    console.log(res)
+}).catch(function(err){
+    console.error(err)
+})
