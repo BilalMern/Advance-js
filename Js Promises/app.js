@@ -332,3 +332,21 @@
 // }).then(function(res){
 //   console.log(res)
 // })
+
+
+
+// Inrview and different promise API's!
+
+//Promise.all!
+
+let prom1= new Promise(function(resolve,reject){
+    // resolve("first promise resolved")
+    reject("first promise failed")
+})
+let onres1=function(res){
+    console.log(res)
+}
+let onrej1= function(rej){
+    console.error(rej)
+}
+prom1.then(onres1).catch(onrej1)
