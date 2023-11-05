@@ -427,29 +427,56 @@
 // }
 // Promise.all([prom1,prom2,prom3]).then(onres).catch(onerror)
 
+
+
 //Promise.allSettled..
 
-let prom1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("first promise has resolved!");
-  }, 3000);
-});
+// let prom1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("first promise has resolved!");
+//   }, 3000);
+// });
+
+// let prom2= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+// // resolve("Second promise has resolved!")
+// reject("second promise has rejected!")    
+// },1000)
+// })
+
+// let prom3 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("Third promise has resolved!")
+//     },2000)
+// })
+
+// Promise.allSettled([prom1,prom2,prom3]).then((res)=>{
+//     console.log(res)
+// }).catch((err)=>{
+//     console.error(err)
+// })
+
+
+let prom1= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("first promise has resolved")
+    },3000)
+})
 
 let prom2= new Promise((resolve,reject)=>{
     setTimeout(()=>{
-// resolve("Second promise has resolved!")
-reject("second promise has rejected!")    
-},1000)
+        resolve("Second promise has resolved")
+    },1000)
 })
 
-let prom3 = new Promise((resolve,reject)=>{
+let prom3= new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        resolve("Third promise has resolved!")
+        resolve("Third promise has resolved")
     },2000)
 })
 
-Promise.allSettled([prom1,prom2,prom3]).then((res)=>{
+Promise.race([prom1,prom2,prom3]).then((res)=>{
     console.log(res)
-}).catch((err)=>{
-    console.error(err)
+}).catch((error)=>{
+    console.error(error)
 })
