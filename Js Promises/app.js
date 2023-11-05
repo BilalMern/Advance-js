@@ -354,38 +354,88 @@
 
 //Promise.all!
 
-let prom1= new Promise(function(resolve,reject){
-   setTimeout(function(){
-    resolve("first promise resolved")
-    // reject("first promise failed")
-   },3000)
+// let prom1= new Promise(function(resolve,reject){
+//    setTimeout(function(){
+//     resolve("first promise resolved")
+//     // reject("first promise failed")
+//    },3000)
    
-})
-let onres1=function(res){
-    console.log(res)
-}
-let onrej1= function(rej){
-    console.error(rej)
-}
-// prom1.then(onres1).catch(onrej1)
+// })
+// let onres1=function(res){
+//     console.log(res)
+// }
+// let onrej1= function(rej){
+//     console.error(rej)
+// }
+// // prom1.then(onres1).catch(onrej1)
 
 
-let prom2= new Promise(function(resolve,reject){
-    setTimeout(function(){
-    //  resolve("2nd promise resolved")
-     reject("2nd promise failed")
-    },1000)
+// let prom2= new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//     //  resolve("2nd promise resolved")
+//      reject("2nd promise failed")
+//     },1000)
     
- })
- let onres2=function(res){
-     console.log(res)
- }
- let onrej2= function(rej){
-     console.log(rej)
- }
-//  prom2.then(onres2).catch(onrej2)
-Promise.all([prom1,prom2]).then(function(res){
-    console.log(res)
-}).catch(function(err){
-    console.error(err)
+//  })
+//  let onres2=function(res){
+//      console.log(res)
+//  }
+//  let onrej2= function(rej){
+//      console.log(rej)
+//  }
+
+//  let prom3= new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//      resolve("3rd promise resolved")
+//     //  reject("3nd promise failed")
+//     },1000)
+    
+//  })
+//  let onres3=function(res){
+//     console.log(res)
+// }
+// let onrej3= function(rej){
+//     console.log(rej)
+// }
+
+// Promise.race([prom1,prom2,prom3]).then(function(res){
+//     console.log(res)
+// }).catch(function(err){
+//     console.error(err)
+// })
+
+
+
+let prom1 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("first promise has resolved")
+    },3000)
 })
+
+let prom2 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        reject("2nd promise is rejected")
+        // resolve("Second promise has resolved")
+    },1000)
+})
+
+let prom3 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("Third promise has resolved")
+    },2000)
+})
+
+let onres=(res)=>{
+    console.log(res)
+}
+let onerror=(err)=>{
+    console.error(err)
+}
+Promise.all([prom1,prom2,prom3]).then(onres).catch(onerror)
+
+
+
+
+    
+
+
