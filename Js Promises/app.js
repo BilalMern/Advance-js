@@ -153,9 +153,6 @@
 // };
 // prom(true).then(onfulfil).catch(onreject);
 
-
-
-
 // let prom=(complete)=>{
 //   return new Promise(function(resolve,reject){
 //  console.log("fetching data please wait")
@@ -333,8 +330,6 @@
 //   console.log(res)
 // })
 
-
-
 // Inrview and different promise API's!
 
 // let promiseCall=function(data,message){
@@ -359,7 +354,7 @@
 //     resolve("first promise resolved")
 //     // reject("first promise failed")
 //    },3000)
-   
+
 // })
 // let onres1=function(res){
 //     console.log(res)
@@ -369,13 +364,12 @@
 // }
 // // prom1.then(onres1).catch(onrej1)
 
-
 // let prom2= new Promise(function(resolve,reject){
 //     setTimeout(function(){
 //     //  resolve("2nd promise resolved")
 //      reject("2nd promise failed")
 //     },1000)
-    
+
 //  })
 //  let onres2=function(res){
 //      console.log(res)
@@ -389,7 +383,7 @@
 //      resolve("3rd promise resolved")
 //     //  reject("3nd promise failed")
 //     },1000)
-    
+
 //  })
 //  let onres3=function(res){
 //     console.log(res)
@@ -404,38 +398,58 @@
 //     console.error(err)
 // })
 
+//Promise.all..
 
+// let prom1 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("first promise has resolved")
+//     },3000)
+// })
 
-let prom1 = new Promise((resolve,reject)=>{
+// let prom2 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         reject("2nd promise is rejected")
+//         // resolve("Second promise has resolved")
+//     },1000)
+// })
+
+// let prom3 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("Third promise has resolved")
+//     },2000)
+// })
+
+// let onres=(res)=>{
+//     console.log(res)
+// }
+// let onerror=(err)=>{
+//     console.error(err)
+// }
+// Promise.all([prom1,prom2,prom3]).then(onres).catch(onerror)
+
+//Promise.allSettled..
+
+let prom1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("first promise has resolved!");
+  }, 3000);
+});
+
+let prom2= new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        resolve("first promise has resolved")
-    },3000)
-})
-
-let prom2 = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        reject("2nd promise is rejected")
-        // resolve("Second promise has resolved")
-    },1000)
+// resolve("Second promise has resolved!")
+reject("second promise has rejected!")    
+},1000)
 })
 
 let prom3 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        resolve("Third promise has resolved")
+        resolve("Third promise has resolved!")
     },2000)
 })
 
-let onres=(res)=>{
+Promise.allSettled([prom1,prom2,prom3]).then((res)=>{
     console.log(res)
-}
-let onerror=(err)=>{
+}).catch((err)=>{
     console.error(err)
-}
-Promise.all([prom1,prom2,prom3]).then(onres).catch(onerror)
-
-
-
-
-    
-
-
+})
