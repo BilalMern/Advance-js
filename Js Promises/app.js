@@ -427,8 +427,6 @@
 // }
 // Promise.all([prom1,prom2,prom3]).then(onres).catch(onerror)
 
-
-
 //Promise.allSettled..
 
 // let prom1 = new Promise((resolve, reject) => {
@@ -440,7 +438,7 @@
 // let prom2= new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
 // // resolve("Second promise has resolved!")
-// reject("second promise has rejected!")    
+// reject("second promise has rejected!")
 // },1000)
 // })
 
@@ -456,27 +454,59 @@
 //     console.error(err)
 // })
 
+//Promise.race..
 
-let prom1= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("first promise has resolved")
-    },3000)
-})
+// let prom1= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//     //    reject("first rejected")
+//         resolve("first promise has resolved")
+//     },3000)
+// })
 
-let prom2= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("Second promise has resolved")
-    },1000)
-})
+// let prom2= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//     //    reject("Second promise has rejected")
+//         resolve("Second promise has resolved")
+//     },3000)
+// })
 
-let prom3= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("Third promise has resolved")
-    },2000)
-})
+// let prom3= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("Third promise has resolved")
+//     },3000)
+// })
 
-Promise.race([prom1,prom2,prom3]).then((res)=>{
-    console.log(res)
-}).catch((error)=>{
-    console.error(error)
-})
+// Promise.race([prom1,prom2,prom3]).then((res)=>{
+//     console.log(res)
+// }).catch((error)=>{
+//     console.error(error)
+// })
+
+//Promise.any...
+
+let prom1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    //    reject("first rejected")
+    resolve("first promise has resolved");
+  }, 3000);
+});
+
+let prom2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    //    reject("Second promise has rejected")
+    resolve("Second promise has resolved");
+  }, 4000);
+});
+
+let prom3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Third promise has resolved");
+  }, 2000);
+});
+Promise.any([prom1, prom2, prom3])
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
