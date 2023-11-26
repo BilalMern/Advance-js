@@ -225,12 +225,7 @@
 //     }
 //     getData()
 
-
-
-
-
-
-// Two Promises having different time for resolve in one function 
+// Two Promises having different time for resolve in one function
 
 // let p1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -251,8 +246,6 @@
 // }
 // getData()
 
-
-
 // let p1 = new Promise((resolve, reject) => {
 //         setTimeout(() => {
 //           resolve("The promise1 has been resolved!");
@@ -266,15 +259,104 @@
 //     async function getData(){
 //         let data1= await p1;
 //         console.log(data1)
-    
+
 //         let data2 = await p2;
 //         console.log(data2)
 //     }
 //     getData()
 
+// let prome= new Promise((resolve,reject)=>{
+//     resolve("promise has resolved!")
+// })
+// function getData(){
+//     prome.then((res)=>{
+//         console.log(res)
+//     })
+// }
+// getData()
+
+// let prome= new Promise((resolve,reject)=>{
+//     resolve("promise has resolved!")
+// })
+// async function getData(){
+//     let data = await prome
+//     console.log(data)
+// }
+// getData()
+
+// let prome= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("promise has resolved")
+//     },3000)
+//     console.log("hello there!")
+// })
+
+// prome.then((res)=>{
+//     console.log (res)
+// })
+
+// let prome= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("Promise has resolved")
+
+//     },3000)
+// })
+// async function getData(){
+//     let val = await prome;
+//     console.log(val)
+//     console.log("hello there!")
+// }
+// getData()
+
+// let prome = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("promise has resolved")
+
+//     },3000)
+// })
+// prome.then((res)=>{
+//     console.log(res)
+// })
+// console.log("hello there!")
 
 
 
-    
-    
-    
+// let prome = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("promise has resolved");
+//   }, 3000);
+// });
+// async function getData() {
+//     let val = await prome;
+//     console.log(val)
+//     console.log("hello there!")
+// }
+// getData()
+
+
+// let prome = new Promise((resolve,reject)=>{
+//    setTimeout(()=>{
+//     resolve("promise has resolved!")
+//    },3000) 
+// })
+
+// prome.then((res)=>{
+//     console.log(res)
+// })
+// console.log("hello there!")
+
+
+// let prome = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("Promise has been resolved!")
+//     },3000)
+// })
+// async function foo(){
+//     let data = await prome;
+//     console.log (data)
+//     console.log("hello")
+// }
+// foo()
+// console.log("hello there!")
+
+

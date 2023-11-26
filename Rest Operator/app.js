@@ -31,3 +31,23 @@
 // foo("billa","BA",3,2,4)
 // foo("john","BSCS",3,4,5,6)
 
+
+
+// let arr = ["billa","maantu","manna"]
+// console.log(...arr)
+
+
+
+// let arr = ["billa","maantu","manna"]
+// let arr2 = [...arr]
+// arr.push("channo")
+// console.log(arr)
+// console.log(arr2)
+
+let obj = {
+    name: "billa",
+    roll: 123
+}
+for(let i in obj){
+    console.log(obj[i])
+}
