@@ -25,3 +25,17 @@ console.log(variable2 ?? 10)
 let variable3 = false;
 console.log(variable3 ?? 20)
 //* The above code give us a output: false.
+
+//! Basically this operator comes due to || operator issue, the issue is when we using || operator it will always give us a default value for all the falsy values //
+
+let variable4 = false;
+console.log(variable4 || 10)
+//* The above code give us a output: 10.
+
+let variable5 = 0;
+console.log(variable5 || 10)
+//* The above code give us a output: 10.
+
+let variable6 = undefined
+console.log(variable6 || 10)
+//* The above code give us a output: 10.
